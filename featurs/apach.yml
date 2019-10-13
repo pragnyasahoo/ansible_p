@@ -1,0 +1,8 @@
+- hosts: myservers
+  become: true
+
+  tasks:
+    - name: Apache install
+      yum: 
+        name: httpd
+        state: latest
