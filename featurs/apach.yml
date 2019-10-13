@@ -1,4 +1,4 @@
-- hosts: myservers
+- hosts: anodes
   become: true
 
   tasks:

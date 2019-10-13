@@ -1,7 +1,8 @@
 - hosts: all
   gather_facts: no
+  become: true
 
   tasks:
     - name: copyfiles 
-      copy: src={{ item }} dest=/tmp/ owner=vibhu mode=666
+      copy: src={{ item }} dest=/tmp/ owner=root mode=666
       with_fileglob: ./*
