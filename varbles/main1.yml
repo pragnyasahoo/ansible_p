@@ -1,12 +1,12 @@
 - hosts: anode
-  remote_user: vibhu
+  remote_user: ansible
   become: true
   vars:
-    dict:
+    dict1:
       msg_var: hiWelcome
       abc: alphabets
       lists: items
   tasks:  
     - name: DebugMessage
       debug:
-        msg: "{{ dict }}"
+        msg: "{{ dict1 }}"

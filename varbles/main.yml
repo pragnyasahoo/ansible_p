@@ -1,9 +1,13 @@
 - hosts: anode
-  remote_user: vibhu
+  remote_user: ansible
   become: true
   vars:
-    msg_var: hiWelcome
+    msg_var: HelloWorld
+    abc: abc
   tasks:  
-  - name: DebugMessage
+  - name: HelloWorld
     debug:
       msg: "{{ msg_var }}"
+  - name: secondHelloWorld
+    debug:
+      msg: "{{ abc }}"

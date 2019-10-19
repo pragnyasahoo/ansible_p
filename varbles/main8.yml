@@ -1,9 +1,12 @@
 - hosts: anode
-  remote_user: vibhu
+  remote_user: ansible
   gather_facts: true
   become: true
 
   tasks:  
   - name: DebugMessage
     debug:
-      msg: "{{ hostvars[ansible_hostname] }}"
+      msg: "{{ hostvars[inventory_hostname].ansible_hostname }}"
+  - name: DebugMessage
+    debug:
+      msg: "{{ hostvars[inventory_hostname].ansible_interfaces[0] }}"

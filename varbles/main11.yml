@@ -1,5 +1,5 @@
 - hosts: anode
-  remote_user: vibhu
+  remote_user: ansible
   become: true
   vars:
     dict:
@@ -9,7 +9,7 @@
   tasks:  
   - name: DebugMessage
     debug:
-      msg: "{{ hostvars[inventory_hostname].ansible_name | default('baba') }}"
+      msg: "{{ hostvars[inventory_hostname].ansible_name | default('Om') }}"
   - name: DbugMessage
     debug:
       msg: "{{ hostvars[inventory_hostname]['mywork'] }}"

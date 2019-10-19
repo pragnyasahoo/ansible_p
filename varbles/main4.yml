@@ -1,5 +1,5 @@
 - hosts: anode
-  remote_user: vibhu
+  remote_user: ansible
   become: true
   vars_files:
     - variables.yml 
